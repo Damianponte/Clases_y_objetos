@@ -11,20 +11,20 @@ public class MainCancion {
         Cancion cancion3= new Cancion();
         Cancion cancion4= new Cancion();
         //cancion1
-       cancion1.SetTitulo("Volar");
+       cancion1.setTitulo("Volar");
        cancion1.setArtista("la pegatina");
        cancion1.setDuracion(215);
 
         //cancion2
-        cancion2.SetTitulo("mentirosa");
+        cancion2.setTitulo("mentirosa");
         cancion2.setArtista("rafaga");
-        cancion2.setDuracion(225);
+        cancion2.setDuracion(235);
         //cancion3
-        cancion3.SetTitulo("So Payaso");
+        cancion3.setTitulo("So Payaso");
         cancion3.setArtista("Extremo Duro");
         cancion3.setDuracion(240);
         //cancion4
-        cancion4.SetTitulo("Lady Madrid");
+        cancion4.setTitulo("Lady Madrid");
         cancion4.setArtista("leiva");
         cancion4.setDuracion(180);
 
@@ -32,5 +32,30 @@ public class MainCancion {
         System.out.println("la cancion " + cancion2.getTitulo() + " del artista " + cancion2.getArtista() + " dura " + cancion2.getduracion() + " segundos" );
         System.out.println("la cancion " + cancion3.getTitulo() + " del artista " + cancion3.getArtista() + " dura " + cancion3.getduracion() + " segundos" );
         System.out.println("la cancion " + cancion4.getTitulo() + " del artista " + cancion4.getArtista() + " dura " + cancion4.getduracion() + " segundos" );
+
+
+        //creamos array:
+        Cancion[] cancion = {cancion1, cancion2, cancion3, cancion4};
+
+        int cancionMasLarga= cancion[0].getduracion();
+
+        for(int i=0;i<cancion.length;i++){
+            if(cancionMasLarga<cancion[i].getduracion()){
+                cancionMasLarga=cancion[i].getduracion();
+            }
+
+        }
+        System.out.println("la cancion mas larga es: " + cancionMasLarga);
+
+        System.out.println("hubo un error la duración de la cancion : " + cancion2.getTitulo() + " ha cambiado su tiempo de duración");
+        cancion2.setDuracion(320);
+
+        for(int i=0;i<cancion.length;i++){
+            if(cancionMasLarga<cancion[i].getduracion()){
+                cancionMasLarga=cancion[i].getduracion();
+            }
+
+        }
+        System.out.println("la cancion mas larga es: " + cancionMasLarga);
     }
 }
