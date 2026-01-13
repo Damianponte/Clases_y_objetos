@@ -1,4 +1,4 @@
-public class Main {
+public class MainPokemon {
     public static void main(String[] args){
         // Scanner sc=new Scanner(System.in);
         //new es un constructor de objetos
